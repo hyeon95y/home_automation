@@ -25,15 +25,21 @@ def open_icloud(link, profile_number, positions, sizes, email, password) :
     try : 
         WebDriverWait(driver, delay).until(EC.frame_to_be_available_and_switch_to_it((By.ID, 'auth-frame')))
     except : 
-        driver.switch_to.frame('auth-frame')
+        try : 
+            driver.switch_to.frame('auth-frame')
+        except : 
+            pass
         pass
     time.sleep(5)
-    email_input = WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.ID, 'account_name_text_field')))
-    email_input.send_keys(email)
-    email_input.send_keys(Keys.ENTER)
-    password_input = WebDriverWait(driver, delay).until(EC.element_to_be_clickable((By.ID, 'password_text_field')))
-    password_input.send_keys(password)
-    password_input.send_keys(Keys.ENTER)
+    try :     
+        email_input = WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.ID, 'account_name_text_field')))
+        email_input.send_keys(email)
+        email_input.send_keys(Keys.ENTER)
+        password_input = WebDriverWait(driver, delay).until(EC.element_to_be_clickable((By.ID, 'password_text_field')))
+        password_input.send_keys(password)
+        password_input.send_keys(Keys.ENTER)
+    except :
+        pass
 
     driver.set_window_position(positions[0], positions[1])
     driver.set_window_size(sizes[0], sizes[1])
@@ -54,10 +60,13 @@ def play_youtube(link, minutes, volume) :
         pass
 
     now = datetime.datetime.today()
-    future = datetime.datetime(now.year,now.month,now.day,now.hour,now.minute+minutes)
+    future = datetime.datetime(now.year,now.month,now.day,now.hour,now.minute) + datetime.timedelta(minutes=minutes)
     print(now, future)
     time.sleep((future-now).seconds)
     driver.quit()
+    
+    Sound.volume_set(50)
+    
     return
 
 def play_bbc(link, minutes, volume) :
@@ -68,12 +77,15 @@ def play_bbc(link, minutes, volume) :
     driver.get(link)
 
     WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.ID, 'jwppp-video-box-801'))).click()
-
+    
     now = datetime.datetime.today()
-    future = datetime.datetime(now.year,now.month,now.day,now.hour,now.minute+minutes)
+    future = datetime.datetime(now.year,now.month,now.day,now.hour,now.minute) + datetime.timedelta(minutes=minutes)
     print(now, future)
     time.sleep((future-now).seconds)
     driver.quit()
+    
+    Sound.volume_set(50)
+    
     return
 
 def monitor_turn_on() : 

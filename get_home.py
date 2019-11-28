@@ -1,4 +1,4 @@
-from home import open_icloud, play_youtube, play_bbc, monitor_turn_on, monitor_turn_off
+from home import open_icloud, play_youtube, play_bbc
 from info import get_email_passwd
     
 def main() : 
@@ -6,8 +6,6 @@ def main() :
     # C:/Program Files (x86)/cron
     # chromedriver.exe also should be under the path of cron
     email, password = get_email_passwd() # plain text
-    
-    monitor_turn_off()
 
     # open reminder
     # at 7:00
@@ -24,25 +22,9 @@ def main() :
     
     monitor_turn_on()
     
-    # play youtube
-    # from 7:00 ~ 7:30
-    link = 'https://www.youtube.com/watch?v=Suy_dHz8Ojg'
-    minutes_music = 1
-    volume_music = 20
-    play_youtube(link, minutes_music, volume_music)
-    
-    # play bbc
-    # from 7:30 ~ 9:30
-    link = 'https://www.livenewsmag.com/bbc-news-uk-live-stream/'
-    minutes_bbc = 120 # don't quit
-    volume_bbc = 50
-    play_bbc(link, minutes_bbc, volume_bbc)
-    
-    #reminders.quit()
-    #calendar.quit()
-    
     return
     
 if __name__ == "__main__":
     main()
+
 
