@@ -13,6 +13,6 @@ Still working on making system to automate several stuffs.
   - Those two are acutally separated
   - Thus whatever I run in my SSH server, it doesn't appear at the monitor
   - I was trying to run seleinum remote server and control browsers inside the ssh account remotely
-  - But this is not root solution. It enables to open a browser, but can't turn on/off the monitor
+  - But this is not a root solution. It enables to open a browser, but can't turn on/off the monitor
 - Solution in the link seems there is a way to get display in the monitor while accessing via SSH
 - If it is, just simply acess and run script would be fine.
