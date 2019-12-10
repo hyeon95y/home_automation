@@ -7,6 +7,7 @@ Still working on making system to automate several stuffs.
 
 ## Solution to all problems, finally found
 - [How can I export DISPLAY from a Linux terminal to a Windows PC?](https://superuser.com/questions/325630/how-can-i-export-display-from-a-linux-terminal-to-a-windows-pc)
+- [Open a window in a remote machine](https://askubuntu.com/questions/405916/open-a-window-in-a-remote-machine)
 - The original problem was, when I access via SSH, what I'm controlling is not actually the Windows that I'm looking at.
   - SSH accessed Windows account
   - Windows in front of my head, in the monitor
