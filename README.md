@@ -8,9 +8,14 @@
 - At least this guy is trying to do the same thing with me
 - Install PsTools and set environment variable
 
-Turn off the screen
+Turn off the screen (in the PATH)
 ```bash
 FOR /F "usebackq tokens=4" %s IN (`tasklist /nh /fo table /fi "imagename eq explorer.exe"`) DO psexec -accepteula -nobanner -d -i %s -w "%windir%" powershell (Add-Type '[DllImport(\"user32.dll\")]^public static extern int SendMessage(int hWnd, int hMsg, int wParam, int lParam);' -Name a -Pas)::SendMessage(-1,0x0112,0xF170,2)
+```
+
+Turn off the screen (outside of PATH)
+```bash
+FOR /F "usebackq tokens=4" %s IN (`tasklist /nh /fo table /fi "imagename eq explorer.exe"`) DO C:\PSTools\psexec -accepteula -nobanner -d -i %s -w "%windir%" powershell (Add-Type '[DllImport(\"user32.dll\")]^public static extern int SendMessage(int hWnd, int hMsg, int wParam, int lParam);' -Name a -Pas)::SendMessage(-1,0x0112,0xF170,2)
 ```
 
 Run Python Script
