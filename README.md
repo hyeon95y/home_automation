@@ -1,7 +1,7 @@
 # home_automation
 
 ## What I'm trying to do
-- [object](https://github.com/hyeon95y/home_automation/edit/master/object.md)
+- [object](https://github.com/hyeon95y/home_automation/blob/master/object.md)
 
 
 ## Control other session via SSH in Windows10 OpenSSH server
