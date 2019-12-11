@@ -4,8 +4,8 @@
 
 
 ## Control other session via SSH in Windows10 OpenSSH server
+- When X11Forwarding is not available (Windows OpenSSH doesn't support it)
 - [Turn off Win10 display(s) via OpenSSH](https://superuser.com/questions/1382319/turn-off-win10-displays-via-openssh)
-- At least this guy is trying to do the same thing with me
 - Install PsTools and set environment variable
 
 Turn off the screen (in PATH)
@@ -39,4 +39,3 @@ list /nh /fo table /fi "imagename eq explorer.exe"`) DO C:\PSTools\psexe -accept
 ndir%" command
 ```
 
-**this works. yeaaaaaaaaah!**
