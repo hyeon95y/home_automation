@@ -31,12 +31,12 @@ Other commands (in PATH)
 ```
 FOR /F "usebackq tokens=4" %s IN (`task
 list /nh /fo table /fi "imagename eq explorer.exe"`) DO psexec -accepteula -nobanner -d -i %s -w "%wi
-ndir%" command
+ndir%" [command]
 ```
 Other commands (outside of PATH)
 ```
 FOR /F "usebackq tokens=4" %s IN (`task
 list /nh /fo table /fi "imagename eq explorer.exe"`) DO C:\PSTools\psexe -accepteula -nobanner -d -i %s -w "%wi
-ndir%" command
+ndir%" [command]
 ```
 
