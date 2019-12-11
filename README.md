@@ -23,3 +23,7 @@ Still working on making system to automate several stuffs.
 - [Launch GUI Application in WSL without XServer](https://github.com/Microsoft/WSL/issues/2356)
 - [kpocza/LoWe](https://github.com/kpocza/LoWe)
 - [Running Graphical Programs on Windows Subsystem on Linux](https://virtualizationreview.com/articles/2017/02/08/graphical-programs-on-windows-subsystem-on-linux.aspx)
+
+## Hope this works and saves me
+- [Turn off Win10 display(s) via OpenSSH](https://superuser.com/questions/1382319/turn-off-win10-displays-via-openssh)
+- At least this guy is trying to do the same thing with me
