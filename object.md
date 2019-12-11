@@ -1,15 +1,50 @@
 # 1. 아침
-- BIOS Setting
-    - 윈도우 부팅
-- 윈도우 작업 스케줄러
-    - SSH Server 실행
-    - morning.py
-        - reminder, calendar 열기
-        - Youtube Music 실행 (30분)
-        - BBC News 실행 (2시간)
-        - 마지막 작업 후 스크립트 종료
+- Trigger : iPhone Alarm (wake-up)
+    - Shortcuts
+        - 'Turn on the PC'
+            - 윈도우 작업 스케줄러
+                - Start-Service sshd
+        - 'Morning'
+            - Run Script via SSH
+            - 모든 세션을 돌면서 morning.py 실행
+                - reminder, calendar 열기
+                - Youtube Music 실행 (30분)
+                - BBC News 실행 (2시간)
+                - 어떻게 계속 켜놓을수 있을까?
+    
         
 # 2. 집을 떠날때
+- Trigger : When I leave home
+    - Shortcuts
+        - 'Turn off the PC'
+            - Run Script via SSH
+        - 'Clean the room'
+        - ...
+ 
+ # 3. 집에 돌아올때
+ - Trigger : When I get home
+     - Shortcuts
+         - 'Turn on the PC'
+         - 'Get Home'
+             - Run Script via SSH
+                 - reminder, calendar 열기
+                 - Youtube Music 실행 (30분)
+                 - 어떻게 계속 켜놓을수 있을까?
+                 
+ # 4. 그 외 음성 명령
+ - 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+  ----- legacy
+
 - Apple Automation :  Run Script via SSH
     - 모니터 끄기
         - (Add-Type '[DllImport("user32.dll")]public static extern int SendMessage(int hWnd, int hMsg, int wParam, int lParam);' -Name a -Pas)::SendMessage(-1,0x0112,0xF170,2)
