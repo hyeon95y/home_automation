@@ -3,9 +3,10 @@
 
 
 
-## Hope this works and saves me
+## Control other session via SSH in Windows10 OpenSSH server
 - [Turn off Win10 display(s) via OpenSSH](https://superuser.com/questions/1382319/turn-off-win10-displays-via-openssh)
 - At least this guy is trying to do the same thing with me
+- Install PsTools and set environment variable
 
 Turn off the screen
 ```bash
