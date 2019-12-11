@@ -8,7 +8,7 @@
 - At least this guy is trying to do the same thing with me
 - Install PsTools and set environment variable
 
-Turn off the screen (in the PATH)
+Turn off the screen (in PATH)
 ```bash
 FOR /F "usebackq tokens=4" %s IN (`tasklist /nh /fo table /fi "imagename eq explorer.exe"`) DO psexec -accepteula -nobanner -d -i %s -w "%windir%" powershell (Add-Type '[DllImport(\"user32.dll\")]^public static extern int SendMessage(int hWnd, int hMsg, int wParam, int lParam);' -Name a -Pas)::SendMessage(-1,0x0112,0xF170,2)
 ```
@@ -26,10 +26,16 @@ ndir%" C:\Users\Hyeonwoo\AppData\Local\Programs\Python\Python36\python.exe C:\Us
 s\GitHub\home_automation\morning.py
 ```
 
-Other commands
+Other commands (in PATH)
 ```
 FOR /F "usebackq tokens=4" %s IN (`task
 list /nh /fo table /fi "imagename eq explorer.exe"`) DO psexec -accepteula -nobanner -d -i %s -w "%wi
+ndir%" command
+```
+Other commands (outside of PATH)
+```
+FOR /F "usebackq tokens=4" %s IN (`task
+list /nh /fo table /fi "imagename eq explorer.exe"`) DO C:\PSTools\psexe -accepteula -nobanner -d -i %s -w "%wi
 ndir%" command
 ```
 
