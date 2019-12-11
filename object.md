@@ -1,9 +1,13 @@
 # 1. 아침
 - Trigger : iPhone Alarm (wake-up)
     - Shortcuts
+        - 'Light alarm'
+            - 조명 두개 단계적 점등 (미구현)
+        - 'Today's weather'
+        - 'Today's calendar, reminder'
         - 'Turn on the PC'
             - 윈도우 작업 스케줄러
-                - Start-Service sshd
+                - powershell.exe / Start-Service sshd
         - 'Morning'
             - Run Script via SSH
             - 모든 세션을 돌면서 morning.py 실행
@@ -11,13 +15,16 @@
                 - Youtube Music 실행 (30분)
                 - BBC News 실행 (2시간)
                 - 어떻게 계속 켜놓을수 있을까?
-    
+        - 'Boil the water for coffee'
+            - for 3 minutes
         
 # 2. 집을 떠날때
 - Trigger : When I leave home
     - Shortcuts
         - 'Turn off the PC'
             - Run Script via SSH
+        - 'Turn off the light'
+        - 'Turn off the heater'
         - 'Clean the room'
         - ...
  
@@ -25,14 +32,29 @@
  - Trigger : When I get home
      - Shortcuts
          - 'Turn on the PC'
-         - 'Get Home'
+         - 'Turn on the light'
+         - 'Get home'
              - Run Script via SSH
                  - reminder, calendar 열기
                  - Youtube Music 실행 (30분)
                  - 어떻게 계속 켜놓을수 있을까?
+ 
+ # 4. 잘 시간
+ - Trigger : Time 
+     - Shortcuts
+         - 'Turn on the heater'
+         
+ - Trigger : Time
+     - Shortcuts
+         - 'Turn off the light'
                  
+              
  # 4. 그 외 음성 명령
- - 
+ - Shortcuts
+     - 'Boil the water'
+         - for 3 minutes
+     - 'Boil the water for coffee'
+         - for 3 minutes
         
         
         
