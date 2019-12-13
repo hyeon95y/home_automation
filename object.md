@@ -63,7 +63,8 @@
 # 5. 여러 명령 묶어서 애플홈킷 Favorites Scenes로 구현
 - Get Home, Leave Home 정도만 지원하고 (이마저도 위치 센서로 동작하는지는 모름)
 - 나머지 모드는 그냥 이름만 설정할수 있고 조건은 걸 수 없음.
-        
+- Shortcuts에서 Favorites Scenes을 실행시킬수 없음.
+- 그냥 Homekit상에서 여러 명령을 한꺼번에 실행하는 용도로만 사용하고, Shortcuts에서 사용하는 수준의 Automation은 구현할수 없을듯
         
         
         
