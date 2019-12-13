@@ -17,6 +17,8 @@
                 - 어떻게 계속 켜놓을수 있을까?
         - 'Boil the water for coffee'
             - for 3 minutes
+        - '?'
+            - 오늘 날씨, 일정 읽어주기
         
 # 2. 집을 떠날때
 - Trigger : When I leave home
