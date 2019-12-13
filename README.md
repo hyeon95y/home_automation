@@ -40,3 +40,7 @@ list /nh /fo table /fi "imagename eq explorer.exe"`) DO C:\PSTools\psexe -accept
 ndir%" [command]
 ```
 
+## References
+
+### iptime router WOL with command
+- [link](http://2cpu.co.kr/bbs/board.php?bo_table=QnA&wr_id=506383)
